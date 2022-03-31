@@ -16,6 +16,7 @@ public class ContaPoup extends Conta {
 		this.diaAniversario = diaAniversario;
 		this.txJuros = txJuros;
 		
+		
 	}
 	
 	public double getVlSaldo () {
@@ -30,14 +31,14 @@ public class ContaPoup extends Conta {
 		else {
 			return this.vlSaldo;
 		}
-		
-					
+			
 			}
+	
 
 	@Override
 	public boolean saca(double valor) {
 				
-			if (this.vlSaldo > 0 && this.vlSaldo >= valor && valor >0 ){
+			if (this.getVlSaldo() > 0 && getVlSaldo() >= valor && valor >0 ){
 				this.vlSaldo -= valor;
 				return true;
 			}
@@ -54,7 +55,7 @@ public class ContaPoup extends Conta {
 
 	@Override
 	public String toString() {
-		return super.toString() +  "ContaPoup [diaAniversario=" + diaAniversario + ", txJuros=" + txJuros + "]";
+		return super.toString() +  "ContaPoup [diaAniversario= " + diaAniversario + ", txJuros= " + txJuros + "]" + "Valor do saldo " + vlSaldo;
 	}
 		
 	

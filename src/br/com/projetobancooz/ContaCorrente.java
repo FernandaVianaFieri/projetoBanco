@@ -8,7 +8,7 @@ public class ContaCorrente extends Conta{
 
 	
 	public ContaCorrente (int nrConta , int nrAgencia, String nrBanco, double vlSaldo, double chequeEspecial) {
-		
+		super (nrConta, nrAgencia, nrBanco, vlSaldo);
 		this.chequeEspecial = chequeEspecial;
 		
 	}
@@ -36,18 +36,21 @@ public class ContaCorrente extends Conta{
 		return false;
 	}
 	
+	
+	
+	
 	public void deposita (double valor) {
 		this.vlSaldo += valor;
 	}
 
 
+	
 
 	@Override
 	public String toString() {
-		return super.toString()  + "  ContaCorrente {" + 
-	"chequeEspecial=" + chequeEspecial + 
-	"Limite Total = R$" + getVlSaldo()+
-	'}'; 
+	return super.toString()  + 	"  ContaCorrente {" + 	
+	"chequeEspecial= "
+	+ chequeEspecial + 	" Limite Total = R$ " + getVlSaldo()+	'}'; 
 	}
 	
 	
